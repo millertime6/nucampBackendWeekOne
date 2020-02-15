@@ -88,22 +88,22 @@ app.delete('/promotions', (req, res) => {
 });
 
 app.get('/promotions/:promotionId', (req, res) => {
-    res.end(`Will send details of the campsite: ${req.params.campsiteId} to you`);
+    res.end(`Will send details of the campsite: ${req.params.promotionId} to you`);
 });
 
 app.post('/promotions/:promotionId', (req, res) => {
     res.statusCode = 403;
-    res.end(`POST operation not supported on /campsites/${req.params.campsiteId}`);
+    res.end(`POST operation not supported on /campsites/${req.params.promotionId}`);
 });
 
 app.put('/promotions/:promotionId', (req, res) => {
-    res.write(`Updating the campsite: ${req.params.campsiteId}\n`);
+    res.write(`Updating the campsite: ${req.params.promotionId}\n`);
     res.end(`Will update the campsite: ${req.body.name}
         with description: ${req.body.description}`);
 });
 
 app.delete('/promotions/:promotionId', (req, res) => {
-    res.end(`Deleting campsite: ${req.params.campsiteId}`);
+    res.end(`Deleting campsite: ${req.params.promotionId}`);
 });
 
 // end task 2
@@ -137,22 +137,22 @@ app.delete('/partners', (req, res) => {
 });
 
 app.get('/partners/:partnerId', (req, res) => {
-    res.end(`Will send details of the campsite: ${req.params.campsiteId} to you`);
+    res.end(`Will send details of the campsite: ${req.params.partnerId} to you`);
 });
 
 app.post('/partners/:partnerId', (req, res) => {
     res.statusCode = 403;
-    res.end(`POST operation not supported on /campsites/${req.params.campsiteId}`);
+    res.end(`POST operation not supported on /campsites/${req.params.partnerId}`);
 });
 
 app.put('/partners/:partnerId', (req, res) => {
-    res.write(`Updating the campsite: ${req.params.campsiteId}\n`);
+    res.write(`Updating the campsite: ${req.params.partnerId}\n`);
     res.end(`Will update the campsite: ${req.body.name}
         with description: ${req.body.description}`);
 });
 
 app.delete('/partners/:partnerId', (req, res) => {
-    res.end(`Deleting campsite: ${req.params.campsiteId}`);
+    res.end(`Deleting campsite: ${req.params.partnerId}`);
 });
 
 // end task 3
