@@ -1,11 +1,14 @@
+// task 3
+
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const campsiteRouter = express.Router();
+const partnerRouter = express.Router();
 
-campsiteRouter.use(bodyParser.json());
+partnerRouter.use(bodyParser.json());
 
-campsiteRouter.route('/')
+
+partnerRouter.route('/partner')
 .all((req, res, next) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -25,9 +28,7 @@ campsiteRouter.route('/')
     res.end('Deleting all campsites');
 });
 
-// task 1
-
-campsiteRouter.route('/:campsiteId')
+partnerRouter.route('/promotions/:promotionId')
 .all((req, res, next) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -47,6 +48,4 @@ campsiteRouter.route('/:campsiteId')
     res.end('Deleting all campsites');
 });
 
-// end of task 1
-
-module.exports = campsiteRouter;
+module.exports = partnerRouter;
